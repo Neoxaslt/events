@@ -8,7 +8,6 @@ export default class APIScheduler {
     this.lastApiResponse = [];
     this.scheduleJob();
   }
-
   scheduleJob() {
     //'0 */12 * * *' - every 12h
     //'*/5 * * * *' - every 5 minutes
@@ -86,7 +85,8 @@ export default class APIScheduler {
   }
 
   sendObjectsAsMessages(addedObjects) {
-    const channel = this.client.channels.cache.get("939528249413881886");
+    const channelId = process.env["CHANNEL_ID"];
+    const channel = this.client.channels.cache.get(channelId);
     if (!channel) {
       console.error("Channel not found.");
       return;
