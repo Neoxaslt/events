@@ -1,6 +1,7 @@
 import { Client, GatewayIntentBits, EmbedBuilder } from "discord.js";
 import DataOperations from "./DataOperations.js";
 import APIScheduler from "./APIScheduler.js";
+require('dotenv').config();
 
 const client = new Client({
   intents: [
@@ -220,5 +221,6 @@ function dayOfWeek(date) {
 
 
 
-const mySecret = process.env["TOKEN"];
+//const mySecret = process.env["TOKEN"];
+const mySecret = process.env.TOKEN
 client.login(mySecret);
