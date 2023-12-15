@@ -1,4 +1,5 @@
 import { REST, Routes } from "discord.js";
+require('dotenv').config();
 
 /** 
 To register commands type in terminal: node src/registerCommands.js
@@ -17,9 +18,12 @@ const commands = [
     description: "Will response with upcoming Big Games",
   },
 ];
-const mySecret = process.env["TOKEN"];
-const myClientId = process.env["CLIENT_ID"];
-const myGuildId = process.env["GUILD_ID"];
+// const mySecret = process.env["TOKEN"];
+// const myClientId = process.env["CLIENT_ID"];
+// const myGuildId = process.env["GUILD_ID"];
+const mySecret = process.env.TOKEN
+const myClientId = process.env.CLIENT_ID
+const myGuildId = process.env.GUILD_ID
 
 const rest = new REST({ version: "10" }).setToken(mySecret);
 (async () => {
