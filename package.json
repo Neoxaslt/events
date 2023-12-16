@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/index.js",
     "dev": "npm run dev-vercel",
-    "dev:pm2": "pm2 start src/index.jsjs --watch",
+    "dev-vercel": "vercel dev",
+    "dev:pm2": "pm2 start src/index.js --watch",
     "deploy": "vercel"
   },
   "keywords": [],
