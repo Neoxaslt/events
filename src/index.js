@@ -1,7 +1,7 @@
 import { Client, GatewayIntentBits, EmbedBuilder } from "discord.js";
 import DataOperations from "./DataOperations.js";
 import APIScheduler from "./APIScheduler.js";
-require('dotenv').config();
+import 'dotenv/config';
 
 const client = new Client({
   intents: [
