@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/index.js",
-    "dev": "vercel dev",
+    "dev": "npm run dev-vercel",
     "dev:pm2": "pm2 start src/index.jsjs --watch",
     "deploy": "vercel"
   },
