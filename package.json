@@ -5,9 +5,9 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node your_bot_file.js",
+    "start": "node src/index.js",
     "dev": "vercel dev",
-    "dev:pm2": "pm2 start your_bot_file.js --watch",
+    "dev:pm2": "pm2 start src/index.jsjs --watch",
     "deploy": "vercel"
   },
   "keywords": [],
